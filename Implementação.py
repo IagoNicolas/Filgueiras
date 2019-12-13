@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import math
 import statistics
 import scipy
+import scipy.stats
 
 a = 0
 seg = 0
@@ -236,11 +237,20 @@ for i in range(0, 50):
     datav[i]=datav[i]/2400
     datai[i]=datai[i]/2400
 stdatav = statistics.stdev(datav)
-stdatai = statistics.stdev(datai)
+stdatai = statistics.stdev(datai)I
 histv = np.histogram(datav)
 histi = np.histogram(datai)
 normv = scipy.stats.normaltest(datav)
 normi = scipy.stats.normaltest(datai)
 
 '''------------------------------------------------------------------------'''
+
+pot = 0
+PF = 0
+
+for i in range(0, 120000):
+    pot = pot+data[1][i]*data[2][i]
+    
+PF = (data[1][i]*data[2][i])/(Vrms*Irms)
+print(PF)
 

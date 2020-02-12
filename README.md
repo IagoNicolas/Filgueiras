@@ -1,3 +1,1 @@
-# Filgueiras
-
-Quem copiar, vai ter o cu comido.
+# AC signal data processing.
